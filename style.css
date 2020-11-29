@@ -40,14 +40,23 @@ h1 {
 
 .play {
     margin-top: 5rem;
-    width: 20rem;
+    width: 35rem;
     height: 20rem;
     background-color: #fff;
-    display: inline;
     border-radius: 10%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.snake {
+    margin-right: 1rem;
+}
+
+.snake img{
+    display: block;
+    width: 20rem;
+    height: 15rem;
 }
 
 .play-game, .return {

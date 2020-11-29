@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #398;
+    background-color: rgb(44, 233, 233);
     height: 95vh;
     width: 95;
     display: flex;

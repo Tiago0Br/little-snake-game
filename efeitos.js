@@ -48,7 +48,7 @@ function update(event) {
 }
 
 function startGame() {
-    if (snake[0].x > 15 * box && direction === 'right') endGame()
+    if (snake[0].x > 23 * box && direction === 'right') endGame()
     if (snake[0].x < 0 && direction === 'left') endGame()
     if (snake[0].y > 15 * box && direction === 'down') endGame()
     if (snake[0].y < 0 && direction === 'up') endGame()

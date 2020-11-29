@@ -26,3 +26,10 @@ h1 {
     font-family: 'Pixel';
     font-size: 3rem;
 }
+
+@media only screen and (max-width: 768px) {
+    #snake {
+        width: 400px;
+        height: 400px;
+    }
+}

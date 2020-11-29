@@ -1,7 +1,10 @@
 let canvas = document.getElementById('snake')
 let context = canvas.getContext("2d")
 let box = 32
+let score = 0
 let snake = []
+let game = setInterval(startGame, 100)
+
 snake[0] = {
     x: 8 * box,
     y: 8 * box
@@ -15,7 +18,12 @@ let food = {
 
 function createBG() {
     context.fillStyle = "lightgreen"
-    context.fillRect(0, 0, 16 * box, 16 * box)
+    context.fillRect(0, 0, 64 * box, 64 * box)
+}
+
+function endGame() {
+    clearInterval(game)
+    alert(`Game Over! D:\nSua pontuação foi ${score}`)
 }
 
 function createSnake() {
@@ -40,21 +48,21 @@ function update(event) {
 }
 
 function startGame() {
-    if (snake[0].x > 15 * box && direction === 'right') snake[0].x = 0
-    if (snake[0].x < 0 && direction === 'left') snake[0].x = 16 * box
-    if (snake[0].y > 15 * box && direction === 'down') snake[0].y = 0
-    if (snake[0].y < 0 && direction === 'up') snake[0].y = 16 * box
+    if (snake[0].x > 15 * box && direction === 'right') endGame()
+    if (snake[0].x < 0 && direction === 'left') endGame()
+    if (snake[0].y > 15 * box && direction === 'down') endGame()
+    if (snake[0].y < 0 && direction === 'up') endGame()
 
     for (i = 1; i < snake.length; i++) {
         if (snake[0].x === snake[i].x && snake[0].y === snake[i].y) {
-            clearInterval(game)
-            alert('Game Over! D:')
+            endGame()
         }
     }
 
     createBG()
     createSnake()
     createFood()
+    document.querySelector(".score").innerHTML = score
 
     let snakeX = snake[0].x
     let snakeY = snake[0].y
@@ -67,6 +75,7 @@ function startGame() {
     if(snakeX !== food.x || snakeY !== food.y) {
         snake.pop()
     } else {
+        score++
         food.x = Math.floor(Math.random() * 15 + 1) * box
         food.y = Math.floor(Math.random() * 15 + 1) * box
     }
@@ -79,4 +88,3 @@ function startGame() {
     snake.unshift(newHead)
 }
 
-let game = setInterval(startGame, 100)

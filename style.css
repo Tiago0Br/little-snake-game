@@ -8,3 +8,9 @@ body {
     flex-direction: column;
     color: rgb(4, 117, 4);
 }
+
+.score {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}

@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <script defer src="./efeitos.js"></script>
-    <title>Snake Game</title>
+    <title>Jogo da cobrinha</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/all.min.css">
 </head>
-<body>
-    <h1>Snake Game</h1>
-    <div class="option">
-        <a href="/menu.html" class="return">
-            <img src="/images/arrow-circle-left-solid.svg" alt="Voltar">
-            <p>Voltar</p>
-        </a>
+<body class="menu">
+    <h1 class="title">Jogo da cobrinha</h1>
+    <div class="play">
+        <div class="snake">
+            <img src="/images/snake.png" alt="cobrinha"> 
+        </div>
+            <a href="index.html" class="play-game">
+                <img src="/images/play-circle-regular.svg" alt="Jogar">     
+                <p>Jogar</p>
+            </a>
     </div>
-    <p class="score"></p>
-    <canvas id="snake" width="768" height="512"></canvas>
 </body>
 </html>

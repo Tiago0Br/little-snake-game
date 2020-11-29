@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Pixel";
-    src: url("../fonts/Pixel.ttf");
+    src: url("/fonts/Pixel.ttf");
 }
 
 body {
@@ -28,6 +28,7 @@ h1 {
 }
 
 .menu {
+    margin: 0;
     background-color: rgb(44, 233, 233);
 }
 
@@ -36,6 +37,36 @@ h1 {
     font-size: 5rem;
     top: 1rem;
 }
+
+.play {
+    margin-top: 5rem;
+    width: 20rem;
+    height: 20rem;
+    background-color: #fff;
+    display: inline;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-game {
+    display: inherit;
+    text-decoration: none;
+}
+
+.play-game img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+.play-game p {
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: green;
+}
+
 
 @media only screen and (max-width: 768px) {
     #snake {

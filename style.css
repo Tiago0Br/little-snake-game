@@ -27,6 +27,16 @@ h1 {
     font-size: 3rem;
 }
 
+.menu {
+    background-color: rgb(44, 233, 233);
+}
+
+.title {
+    position: absolute;
+    font-size: 5rem;
+    top: 1rem;
+}
+
 @media only screen and (max-width: 768px) {
     #snake {
         width: 400px;
